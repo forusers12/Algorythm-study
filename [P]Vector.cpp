@@ -18,7 +18,7 @@ int main(){
 
 
 	// pop_back
-	v.pop_back();
+	v.pop_back(); // back baack -> LIFO
 
 
 	// back and front
@@ -29,7 +29,7 @@ int main(){
 	// [i] and at(i)
 	cout << "vector opeartor[] : " << v[3] << '\n';
 	cout << "vector at : " << v.at(3) << '\n';
-
+	v[3] += 10;
 
 	// size
 	cout << "vector size : " << v.size() << '\n';
