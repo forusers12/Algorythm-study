@@ -30,6 +30,7 @@ int main(){
 	cout << "vector opeartor[] : " << v[3] << '\n';
 	cout << "vector at : " << v.at(3) << '\n';
 	v[3] += 10;
+	v[0] += 3;
 
 	// size
 	cout << "vector size : " << v.size() << '\n';

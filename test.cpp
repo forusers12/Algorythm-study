@@ -1,28 +1,40 @@
-// 문자열 S를 입력받은 후에, 각 문자를 R번 반복해 새 문자열 P를 만든 후 출력하는
-// 프로그램을 작성하시오. 즉, 첫 번째 문자를 R번 반복하고, 두 번째 문자를 R번 반복하는 식으로
-// P를 만들면 된다. S에는 QR Code "alphanumeric" 문자만 들어있다.
+// 영어 대소문자와 띄어쓰기만으로 이루어진 문자열이 주어진다. 이 문자열에는
+// 몇 개의 단어가 있을까? 이를 구하는 프로그램을 작성하시오. 단, 한 단어가 여러 번 
+// 등장하면 등장한 횟수만큼 모두 세어야 한다.
 
 #include <iostream>
+
 using namespace std;
 
 int main()
 {
-    int n,r;
     string str;
+    int space = 0;
 
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> r >> str;
+    /* 
+        <cin.getline vs getline>
+        char cs[20];
+        cin.getline(cs, 20);
+    */
 
-        for (int j = 0; j < str.size(); j++) {
-            for (int k = 0; k < r; k++)
-                cout << str[j];
+    getline(cin,str);
+
+    for(int i = 0; i < str[i]; i++) {
+        
+        if(str[i] == ' ') {
+            space++;
         }
-        cout << '\n';
     }
     
+    //Conservation Part
+    if(str[0] != ' ') {
+        space++;
+    }
+    if(str[str.size()-1] == ' ') {
+        space--;
+    }
 
-
+    cout << space;
 
     return 0;
 }
