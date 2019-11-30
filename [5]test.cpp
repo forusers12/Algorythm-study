@@ -26,14 +26,16 @@ int solution(string str) {
             x = 3;
         }
 
-        if (str[i-1] == '0') {
-            if (str[i-2] == '1') {
-                add = pow(10,x);
-            }
-        }
-        else {
-            add = pow(str[i-1]-48,x);
-        }
+        // if (str[i-1] == '0') {
+        //     if (str[i-2] == '1') {
+        //         add = pow(10,x);
+        //     }
+        // }
+        // else {
+        //     add = pow(str[i-1]-48,x);
+        // }
+        
+        add = pow(str[i-1]-48,x);
 
         if (str[i+1] == '*') {
             add = add * 2;
